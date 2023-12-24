@@ -1,11 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import Item from './components/Item'
+import ItemDate from './components/ItemDate';
 
 function App() {
   return (
     <div>
-    <Item></Item>
+    <Item name = "Nirma"></Item>
+    <ItemDate day="20" month="June" year="1998"></ItemDate>
+    <Item name = "SurfExcel"></Item>
+    <ItemDate day="22" month="July" year="1999"></ItemDate>
+    <Item name = "555"></Item>
+    <ItemDate day="23" month="August" year="2000"></ItemDate>
     <div className="App">
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -26,5 +32,5 @@ function App() {
    </div>
   );
 }
-
+ 
 export default App;

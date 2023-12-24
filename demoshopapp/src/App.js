@@ -3,12 +3,13 @@ import './App.css';
 import Item from './components/Item'
 import ItemDate from './components/ItemDate';
 
-function App() {
+function App() { 
+  const itemTwoName = "SurfExcel";
   return (
     <div>
     <Item name = "Nirma"></Item>
     <ItemDate day="20" month="June" year="1998"></ItemDate>
-    <Item name = "SurfExcel"></Item>
+    <Item name = {itemTwoName} ></Item>
     <ItemDate day="22" month="July" year="1999"></ItemDate>
     <Item name = "555"></Item>
     <ItemDate day="23" month="August" year="2000"></ItemDate>

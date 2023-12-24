@@ -2,17 +2,39 @@ import logo from './logo.svg';
 import './App.css';
 import Item from './components/Item'
 import ItemDate from './components/ItemDate';
+import Card from './components/card';
 
 function App() { 
-  const itemTwoName = "SurfExcel";
+  // const itemTwoName = "SurfExcel";
+  const response = [
+    {
+      itemName: "Nirma",
+      itemDate: "20",
+      itemMonth: "June",
+      itemyear: "1998"
+    },
+    {
+      itemName: "Nirma2",
+      itemDate: "202",
+      itemMonth: "June2",
+      itemyear: "19981"
+    },
+    {
+      itemName: "Nirma3",
+      itemDate: "203",
+      itemMonth: "June",
+      itemyear: "19982"
+    },
+  ]
   return (
     <div>
-    <Item name = "Nirma"></Item>
-    <ItemDate day="20" month="June" year="1998"></ItemDate>
-    <Item name = {itemTwoName} ></Item>
-    <ItemDate day="22" month="July" year="1999"></ItemDate>
-    <Item name = "555"></Item>
-    <ItemDate day="23" month="August" year="2000"></ItemDate>
+    <Card>
+    <Item name = {response[0].itemName}>hello everyone</Item>
+    <ItemDate day={response[0].itemDate} month={response[0].itemMonth} year={response[0].itemyear}></ItemDate>
+    <Item name = {response[1].itemName} ></Item>
+    <ItemDate day={response[1].itemDate} month={response[1].itemMonth} year={response[1].itemyear}></ItemDate>
+    <Item name = {response[2].itemName}></Item>
+    <ItemDate day={response[2].itemDate} month={response[2].itemMonth} year={response[2].itemyear}></ItemDate>
     <div className="App">
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -30,6 +52,8 @@ function App() {
       </header> */}
        Hello world
     </div>
+
+    </Card>
    </div>
   );
 }

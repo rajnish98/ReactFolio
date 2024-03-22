@@ -1,61 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
-import Item from './components/Item'
-import ItemDate from './components/ItemDate';
-import Card from './components/card';
+import React from 'react';
+import NewProduct from './components/NewProduct';
 
-function App() { 
-  // const itemTwoName = "SurfExcel";
-  const response = [
+import Products from './components/Products';
+
+const App = () => {
+  const products = [
     {
-      itemName: "Nirma",
-      itemDate: "20",
-      itemMonth: "June",
-      itemyear: "1998"
+      id: 'p1',
+      title: 'Nirma',
+      amount: 100,
+      date: new Date(2021, 8, 10),
+    },
+    { 
+      id: 'p2', 
+      title: 'Sirf Excel', 
+      amount: 200, 
+      date: new Date(2021, 2, 2) },
+    {
+      id: 'p3',
+      title: 'Tide',
+      amount: 130,
+      date: new Date(2021, 12, 28),
     },
     {
-      itemName: "Nirma2",
-      itemDate: "202",
-      itemMonth: "June2",
-      itemyear: "19981"
+      id: 'p4',
+      title: 'Maggi',
+      amount: 450,
+      date: new Date(2021, 5, 5),
     },
-    {
-      itemName: "Nirma3",
-      itemDate: "203",
-      itemMonth: "June",
-      itemyear: "19982"
-    },
-  ]
+  ];
+
+  function printProductData(data) {
+    console.log("i am inside APP.js")
+    console.log(data)
+  }
+
   return (
     <div>
-    <Card>
-    <Item name = {response[0].itemName}>hello everyone</Item>
-    <ItemDate day={response[0].itemDate} month={response[0].itemMonth} year={response[0].itemyear}></ItemDate>
-    <Item name = {response[1].itemName} ></Item>
-    <ItemDate day={response[1].itemDate} month={response[1].itemMonth} year={response[1].itemyear}></ItemDate>
-    <Item name = {response[2].itemName}></Item>
-    <ItemDate day={response[2].itemDate} month={response[2].itemMonth} year={response[2].itemyear}></ItemDate>
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello world
-        </a>
-      </header> */}
-       Hello world
+      <NewProduct pranay = {printProductData} />
+      <Products items={products} />
     </div>
-
-    </Card>
-   </div>
   );
 }
- 
+
 export default App;

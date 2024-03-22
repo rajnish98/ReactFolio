@@ -8,7 +8,7 @@ function NewProduct(props) {
         console.log(product)
 
         //calling parent function
-        props.pranay(product);
+        props.rajnish(product);
     }
 
     return (<div className='new-product'>

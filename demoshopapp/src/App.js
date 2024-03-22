@@ -37,7 +37,7 @@ const App = () => {
 
   return (
     <div>
-      <NewProduct pranay = {printProductData} />
+      <NewProduct rajnish = {printProductData} />
       <Products items={products} />
     </div>
   );
